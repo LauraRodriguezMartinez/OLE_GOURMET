@@ -1,0 +1,54 @@
+/* Contenedor principal del buzón */
+.suggestion-box {
+    background-color: #f4e3d4; /* Fondo marrón suave */
+    border-radius: 15px; /* Esquinas redondeadas */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #d2b59f; /* Borde en marrón claro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    max-width: 700px; /* Ancho máximo */
+    margin: 20px auto; /* Centrado */
+    font-family: 'Arial', sans-serif; /* Fuente limpia y profesional */
+    color: #5a3c2a; /* Color del texto marrón oscuro */
+  }
+  
+  /* Título del buzón */
+  .suggestion-box h2 {
+    font-size: 1.8em; /* Tamaño del título */
+    margin-top: 0; /* Sin margen superior */
+    margin-bottom: 15px; /* Espaciado inferior */
+    color: #784e2e; /* Marrón medio */
+    border-bottom: 2px solid #d2b59f; /* Línea decorativa */
+    padding-bottom: 10px;
+    font-weight: bold; /* Negrita para destacar */
+    text-align: center; /* Centrado */
+  }
+  
+  /* Formulario de envío */
+  .suggestion-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre elementos */
+  }
+  
+  /* Campo de texto */
+  .suggestion-box textarea {
+    resize: none; /* Elimina la posibilidad de redimensionar */
+    width: 100%; /* Ancho completo */
+    height: 100px; /* Altura del campo de texto */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 10px; /* Esquinas redondeadas */
+    border: 1px solid #d2b59f; /* Borde en marrón claro */
+    background-color: #fff9f4; /* Fondo casi blanco */
+    color: #5a3c2a; /* Texto marrón oscuro */
+    font-size: 1em;
+    font-family: inherit; /* Hereda la fuente principal */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra interna */
+  }
+  
+  /* Botón de envío */
+  .suggestion-box button {
+    background-color: #8b5e3c; /* Marrón medio */
+    color: #ffffff; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 10px
+  }

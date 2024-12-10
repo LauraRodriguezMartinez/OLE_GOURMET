@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+<!-- CSS code -->
+<link
+rel="stylesheet"
+type="text/css"
+href="{{ url_for('static', filename='layout.css') }}"
+/>
+<link
+rel="stylesheet"
+type="text/css"
+href="{{ url_for('static', filename='home.css') }}"
+/>
+<link
+rel="stylesheet"
+type="text/css"
+href="{{ url_for('static', filename='about_us.css') }}"
+/>
+<link
+rel="stylesheet"
+type="text/css"
+href="{{ url_for('static', filename='buzon.css') }}"
+/>
+<link
+rel="stylesheet"
+type="text/css"
+href="{{ url_for('static', filename='app.css') }}"
+/>
+<link
+rel="stylesheet"
+type="text/css"
+href="{{ url_for('static', filename='users.css') }}"
+/>
+<link
+rel="stylesheet"
+type="text/css"
+href="{{ url_for('static', filename='calendar.css') }}"
+/>
+
+<link 
+rel="icon" 
+type="image/png" 
+href="../static/assets/iconos/icono.png" 
+/>
+
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>home</title>
+    {% endif %}
+</head>
+<body>
+    <section class="section_OLÉ_GOURMET_navbar">
+        <div class="container">
+          <div class="OLÉ_GOURMET_navbar">
+            <h1 class="logo">
+              <img src="../static/assets/home/OLÉ_GOURMET.png" alt="OLÉ GOURMET" class="logo-img">
+            </h1>              
+            </h1>
+            <nav>
+              <ul class="navbar">
+                <li class="button">
+                  <a href="{{url_for('home')}}" class="inside_button">Inicio</a>
+                </li>
+                <li class="button">
+                  <a href="{{url_for('about_us')}}" class="inside_button">Sobre nosotros</a>
+                </li>
+                <li class="button">
+                  <a href="{{url_for('app')}}" class="inside_button">App</a>
+                </li>
+                <div style="margin-left: 700px; display: flex;"> 
+                  <li class="button">
+                    <a href="{{url_for('login')}}" class="inside_button">Inicio Sesion</a>
+                  </li>
+                </div>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+  
+      {% block content %} {% endblock %}
+      </body>
+  </html>

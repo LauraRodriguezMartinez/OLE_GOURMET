@@ -1,0 +1,96 @@
+.section {
+    height: 300px;
+    width: 100%;
+    background-color: white;
+    position: relative; /* Necesario para que el overlay se posicione dentro de la sección */
+}
+
+.img3 {
+    height: 300px;
+    width: 40%;
+    display: flex;
+    margin: auto;
+    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsión */
+}
+
+.overlay {
+    position: absolute; /* Posiciona la capa sobre toda la sección */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cubre todo el ancho de la sección */
+    height: 100%; /* Cubre toda la altura de la sección */
+    background-color: rgba(154, 115, 59, 0.4); /* Marrón semitransparente */
+    display: flex; /* Centrado del texto */
+    justify-content: center; /* Alineación horizontal del texto */
+    align-items: center; /* Alineación vertical del texto */
+    pointer-events: none; /* Permite clics en otros elementos si es necesario */
+}
+
+.overlay-text {
+    color: black; /* Color del texto */
+    font-size: 30px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    text-align: center; /* Alineación del texto */
+    background-color:  rgba(154, 115, 59, 0.8);
+    background-size: 50px;
+}
+.container1 {
+    display: grid; /* Define un contenedor grid */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    gap: 20px; /* Espaciado entre los elementos */
+    padding: 20px; /* Espaciado interno del contenedor */
+    justify-content: center;
+}
+
+.item {
+    background-color: rgba(154, 115, 59, 0.2); /* Fondo claro para las tarjetas */
+    border: 1px solid #ddd; /* Borde fino */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    text-align: center; /* Centra el contenido de las tarjetas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación al pasar el ratón */
+}
+
+.responsive-img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: 100%; /* Ajusta la imagen a la altura del contenedor */
+    object-fit: cover; /* Recorta la imagen para que llene el contenedor sin distorsión */
+}
+
+.item:hover {
+    transform: scale(1.05); /* Efecto de agrandamiento al pasar el ratón */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+.item-img {
+    width: 170px; /* Fija el ancho de las imágenes */
+    height: 200px; /* Fija la altura de las imágenes */
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
+    border-radius: 8px 8px 0 0; /* Redondea las esquinas superiores */
+    border-radius: 80% ;
+}
+
+.item-text {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+.item-link {
+    display: inline-block; /* Enlace como botón */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #007BFF; /* Azul por defecto */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Animación del color */
+}
+
+.item-link:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+}
+

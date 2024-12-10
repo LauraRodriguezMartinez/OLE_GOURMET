@@ -1,0 +1,105 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3e7db; /* Marrón claro de fondo */
+    color: #2c3e2b; /* Verde oscuro para textos */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #3e563d; /* Verde cálido */
+}
+
+/* Contenedor principal del calendario */
+.calendar-container {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 90%;
+    background-color: #fdf5e6; /* Marrón claro/beige */
+    border: 1px solid #d4c4b1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos de los meses */
+.month h2 {
+    margin: 20px 0;
+    font-size: 24px;
+    color: #3e563d; /* Verde cálido */
+    background-color: #ebdac2; /* Fondo marrón claro */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Tablas del calendario */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #d4c4b1; /* Línea marrón claro */
+    font-size: 16px;
+}
+
+/* Estilo para los días normales */
+td {
+    background-color: #fdf5e6; /* Beige */
+    color: #2c3e2b; /* Verde oscuro */
+}
+
+/* Fines de semana */
+th {
+    background-color: #e6cbaa; /* Marrón claro intenso */
+    color: #2c3e2b;
+    font-weight: bold;
+}
+
+td:nth-child(7) { /* Sábados */
+    background-color: #ebdac2; /* Marrón claro */
+}
+
+td:nth-child(1) { /* Domingos */
+    background-color: #faebd7; /* Beige más claro */
+}
+
+/* Eventos (sábados con botón de reserva) */
+.event {
+    background-color: #3e563d; /* Verde cálido */
+    color: #060606; /* Texto blanco */
+    font-weight: bold;
+    border: 1px solid #2c3e2b; /* Verde oscuro */
+    border-radius: 5px;
+}
+
+/* Botón de reserva */
+.reserve-btn {
+    margin-top: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #6a9e72; /* Verde medio */
+    color: #f2e7e7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reserve-btn:hover {
+    background-color: #4f7a59; /* Verde oscuro al pasar el mouse */
+    transform: scale(1.05);
+}
+
+/* Resaltar el día actual (opcional, con JavaScript) */
+.today {
+    border: 2px solid #6a9e72; /* Borde verde medio */
+    background-color: #d4c4b1; /* Marrón claro más intenso */
+    color: #2c3e2b; /* Verde oscuro */
+    font-weight: bold;
+}

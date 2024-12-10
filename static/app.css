@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Barra de navegación horizontal */
+.navbar_app {
+    background-color: #6a4e2f; /* Color marrón claro */
+    text-align: center;
+    padding: 10px 0;
+    position: sticky; /* Hace que la barra de navegación sea sticky */
+    top: 70px; /* Se queda pegada al borde superior */
+    z-index: 1000;
+}
+
+.navbar_app ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar_app li {
+    margin: 0 20px;
+}
+
+.navbar_app a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.navbar_app a:hover {
+    background-color: #5a3a23; /* Color marrón más oscuro */
+    border-radius: 5px;
+}
+
+/* Estilos de las tarjetas */
+.section_app {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 50px; /* Espacio entre tarjetas */
+    perspective: 1000px; /* Proporciona el efecto 3D */
+    margin: 100px 50px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card {
+    width: 80%;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    cursor: pointer;
+    text-align: justify;
+    font-size: 12px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.card:hover {
+    transform: rotateY(180deg); /* Gira la tarjeta */
+}
+
+/* Estilo de las caras de la tarjeta */
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta la cara trasera al mirar la frontal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(224, 203, 173);
+    padding: 15px;
+    margin-top: 10px;
+    overflow: hidden; /* Asegura que la imagen no sobresalga */
+}
+
+/* Cara frontal */
+.card-front {
+    background-color: #685c4a; /* Color frontal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center;
+    padding-top: 20px;
+    height: 100%; /* Asegura que ocupe toda la altura de la tarjeta */
+}
+
+.card-front .card-image {
+    width: 70%;
+    height: 200px; /* Altura ajustada para la imagen */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Separación de la imagen respecto al título */
+}
+
+.card-front .card-title {
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px; 
+    margin-bottom: 20px;
+}
+
+/* Cara trasera */
+.card-back {
+    background-color: #72ad49; /* Color trasero */
+    transform: rotateY(180deg); /* La cara trasera está invertida inicialmente */
+    margin-left: -40px;
+}
+
+/* Estilo para la parte de la descripción o contenido adicional */
+.card-back .description {
+    font-size: 1.1em;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* Estilos de la sección de Juego Interactivo */
+.section_game {
+    padding: 50px;
+    text-align: center;
+    background-color: #f4f4f4; /* Fondo similar al de la página */
+    color: #333;
+    margin: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section_game p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #6a4e2f; /* Color marrón claro */
+}
+
+/* Contenedor de las preguntas del juego */
+.game-container {
+    margin-top: 20px;
+}
+
+.question {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las opciones */
+#opciones {
+    list-style-type: none; /* Elimina los puntos */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Elimina el margen predeterminado */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre las opciones */
+}
+
+#opciones li {
+    padding: 12px 20px; /* Tamaño y espacio dentro de la cajita */
+    background-color: #72ad49; /* Color verde para el fondo de las opciones */
+    color: white; /* Color de texto */
+    font-size: 1.1em; /* Tamaño de texto */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Alineación de texto centrado */
+    cursor: pointer; /* Indicador de puntero para interactividad */
+    transition: background-color 0.3s ease; /* Transición para el cambio de color */
+}
+
+#opciones li:hover {
+    background-color: #6a9e3c; /* Verde más oscuro cuando el cursor pasa sobre la opción */
+}
+
+/* Estilo de la caja de resultados */
+#resultado {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f0f0; /* Fondo gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    color: #333;
+    text-align: center;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .section_app {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+
+    .navbar_app ul {
+        flex-direction: column;
+    }
+
+    .navbar_app li {
+        margin: 10px 0;
+    }
+
+    .game-container {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section_app {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+}

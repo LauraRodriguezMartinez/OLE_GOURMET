@@ -1,0 +1,65 @@
+/* Navbar */
+.logo {
+    display: flex; /* Alinea el texto y la imagen horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+    gap: 10px; /* Espaciado entre la imagen y el texto */
+    margin-left: 50px;
+}
+
+.logo-img {
+    height: 100px; /* Ajusta la altura del logo */
+    width: auto; /* Mantiene la proporción original */
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+}
+
+.section_OLÉ_GOURMET_navbar {
+    background-color: rgb(139, 111, 66);
+    position: sticky; /* Hace que la barra de navegación sea sticky */
+    top: 0; /* Se queda pegada al borde superior */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+} 
+     
+.OLÉ_GOURMET_navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 70px;
+    align-items: center;
+    background-color: rgb(176, 145, 96);
+    padding: 0;    
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    list-style: none;
+    display: flex;
+}
+.button{
+    margin:10px ;
+}
+.inside_button {
+    display: inline-block;
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Fuente en negrita */
+    color: white; /* Color del texto */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Sin subrayado */
+    text-align: center; /* Centrado del texto */
+    cursor: pointer; /* Indicador de clic */
+    transition: background-color 0.3s ease; /* Animación al pasar el ratón */
+  }
+  
+  .inside_button:hover {
+    background-color: #462603; /* Color más oscuro al pasar el ratón */
+  }
+  
+  .inside_button:active {
+    background-color: #331d02; /* Color aún más oscuro al hacer clic */
+  }
+  .text-logo{
+    margin-left: 10px;
+  }
